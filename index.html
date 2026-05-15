@@ -45,9 +45,9 @@
       <div class="section-inner hero-grid">
         <div class="hero-copy">
           <p class="eyebrow hero-rise">成都本地 · 小学 1-6 年级</p>
-          <h1 id="heroTitle" class="hero-rise">新雨｜成都小学晚托精管与一对一陪读</h1>
-          <p class="hero-kicker hero-rise">晚托精管 · 一对一陪读 · 3-6 人小组提效 · 本地老师匹配</p>
-          <p class="hero-text hero-rise">为成都小学家庭提供放学后学习陪伴服务。孩子放学后有人接住时间、盯住作业、记录错题、推进进度，并根据情况匹配一对一老师或 3-6 人小组。</p>
+          <h1 id="heroTitle" class="hero-rise"><span class="desktop-copy">新雨｜成都小学晚托精管与一对一陪读</span><span class="mobile-copy">新雨｜成都小学晚托精管</span></h1>
+          <p class="hero-kicker hero-rise"><span class="desktop-copy">晚托精管 · 一对一陪读 · 3-6 人小组提效 · 本地老师匹配</span><span class="mobile-copy">一对一陪读 · 小组提效 · 本地老师匹配</span></p>
+          <p class="hero-text hero-rise"><span class="desktop-copy">为成都小学家庭提供放学后学习陪伴服务。孩子放学后有人接住时间、盯住作业、记录错题、推进进度，并根据情况匹配一对一老师或 3-6 人小组。</span><span class="mobile-copy">放学后有人盯作业、记错题、管节奏，家长下班不用重新崩溃。</span></p>
           <div class="hero-note hero-rise">
             <strong>新雨的晚托精管</strong>
             <span>不是把孩子放在那里等家长来接，而是把作业过程、错题问题和学习状态一起管起来。</span>
@@ -101,6 +101,18 @@
       </div>
     </section>
 
+    <section class="mobile-quick" aria-label="快捷服务入口">
+      <div class="section-inner">
+        <h2>你现在想解决什么？</h2>
+        <div class="quick-grid">
+          <button type="button" data-mobile-note="手机端快捷入口：想找一对一陪读">找一对一</button>
+          <button type="button" data-mobile-note="手机端快捷入口：想了解晚托精管">找晚托</button>
+          <button type="button" data-mobile-scroll="#groups">拼小组</button>
+          <button type="button" data-mobile-scroll="#teachers">看老师</button>
+        </div>
+      </div>
+    </section>
+
     <section class="section-pad" id="services">
       <div class="section-inner">
         <div class="section-heading">
@@ -131,19 +143,20 @@
             <h3>3-6 人小组提效</h3>
             <p>适合需要学习氛围、固定节奏、性价比更高的家庭。</p>
           </article>
-          <article class="service-card reveal-card">
+          <article class="service-card reveal-card mobile-extra-service">
             <span class="card-num">04</span>
             <div class="icon-mark" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 21s7-4.5 7-10a7 7 0 1 0-14 0c0 5.5 7 10 7 10Z"/><path d="M9.5 11.5h5"/></svg></div>
             <h3>本地老师匹配</h3>
             <p>根据区域、时间、孩子情况，匹配合适老师和新雨陪伴师。</p>
           </article>
-          <article class="service-card reveal-card">
+          <article class="service-card reveal-card mobile-extra-service">
             <span class="card-num">05</span>
             <div class="icon-mark" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 4h10l2 2v14H6z"/><path d="M9 9h6M9 13h5M9 17h3"/></svg></div>
             <h3>周末错题整理</h3>
             <p>集中处理一周卡点，让家长知道下一步该怎么抓。</p>
           </article>
         </div>
+        <button class="mobile-toggle-list" type="button" data-toggle-mobile-list="services" aria-expanded="false">查看更多服务</button>
       </div>
     </section>
 
@@ -219,22 +232,22 @@
           <p>不是把孩子放在那里，而是把每天的学习过程接住。</p>
         </div>
         <div class="flow-steps">
-          <article class="flow-step reveal-card">
+          <article class="flow-step reveal-card mobile-open" tabindex="0">
             <span class="step-number">01</span>
             <h3>到达确认</h3>
             <p>孩子到达后同步家长，先把状态接住。</p>
           </article>
-          <article class="flow-step reveal-card">
+          <article class="flow-step reveal-card" tabindex="0">
             <span class="step-number">02</span>
             <h3>任务登记</h3>
             <p>语文、数学、英语和其他任务逐项记录。</p>
           </article>
-          <article class="flow-step reveal-card">
+          <article class="flow-step reveal-card" tabindex="0">
             <span class="step-number">03</span>
             <h3>过程推进</h3>
             <p>不是放任孩子自己磨，而是按时间段推进完成。</p>
           </article>
-          <article class="flow-step reveal-card">
+          <article class="flow-step reveal-card" tabindex="0">
             <span class="step-number">04</span>
             <h3>错题与反馈</h3>
             <p>当天卡住的地方记录下来，给家长看得懂的反馈。</p>
@@ -253,68 +266,8 @@
           </div>
           <button class="btn btn-primary" type="button" data-open-modal="teacher">申请成为老师</button>
         </div>
-        <div class="teacher-grid">
-          <article class="teacher-card reveal-card" data-note="咨询林老师：小学数学｜来源电子科大｜适合三到六年级计算粗心、应用题慢、作业节奏差｜服务一对一陪读、错题整理｜区域高新区、天府新区">
-            <div class="teacher-top"><div class="avatar">林</div><span class="subject">小学数学</span></div>
-            <h3>林老师</h3>
-            <p class="source">来源：电子科大</p>
-            <p><b>适合：</b>三到六年级计算粗心、应用题慢、作业节奏差</p>
-            <p><b>服务：</b>一对一陪读｜错题整理</p>
-            <p><b>区域：</b>高新区、天府新区</p>
-            <div class="tag-row"><span>数学计算</span><span>应用题</span><span>线下可约</span></div>
-            <button class="text-btn note-fill" type="button">咨询林老师</button>
-          </article>
-          <article class="teacher-card reveal-card" data-note="咨询陈老师：小学语文｜来源四川师范大学｜适合一到三年级阅读打卡、写字慢、作业习惯不稳｜服务晚托精管、低年级习惯陪伴｜区域锦江区、成华区">
-            <div class="teacher-top"><div class="avatar">陈</div><span class="subject">小学语文</span></div>
-            <h3>陈老师</h3>
-            <p class="source">来源：四川师范大学</p>
-            <p><b>适合：</b>一到三年级阅读打卡、写字慢、作业习惯不稳</p>
-            <p><b>服务：</b>晚托精管｜低年级习惯陪伴</p>
-            <p><b>区域：</b>锦江区、成华区</p>
-            <div class="tag-row"><span>低年级</span><span>阅读习惯</span><span>耐心陪伴</span></div>
-            <button class="text-btn note-fill" type="button">咨询陈老师</button>
-          </article>
-          <article class="teacher-card reveal-card" data-note="咨询周老师：小学英语｜来源四川大学｜适合单词记不住、发音不稳、不敢开口读｜服务一对一英语朗读陪练｜区域青羊区、武侯区">
-            <div class="teacher-top"><div class="avatar">周</div><span class="subject">小学英语</span></div>
-            <h3>周老师</h3>
-            <p class="source">来源：四川大学</p>
-            <p><b>适合：</b>单词记不住、发音不稳、不敢开口读</p>
-            <p><b>服务：</b>一对一英语朗读陪练</p>
-            <p><b>区域：</b>青羊区、武侯区</p>
-            <div class="tag-row"><span>英语朗读</span><span>单词记忆</span><span>发音陪练</span></div>
-            <button class="text-btn note-fill" type="button">咨询周老师</button>
-          </article>
-          <article class="teacher-card reveal-card" data-note="咨询王老师：小学数学｜来源西南交通大学｜适合计算反复错、错题不整理、做题慢｜服务一对一陪读、周末错题整理｜区域武侯区、金牛区">
-            <div class="teacher-top"><div class="avatar">王</div><span class="subject">小学数学</span></div>
-            <h3>王老师</h3>
-            <p class="source">来源：西南交通大学</p>
-            <p><b>适合：</b>计算反复错、错题不整理、做题慢</p>
-            <p><b>服务：</b>一对一陪读｜周末错题整理</p>
-            <p><b>区域：</b>武侯区、金牛区</p>
-            <div class="tag-row"><span>计算纠错</span><span>错题整理</span><span>稳定</span></div>
-            <button class="text-btn note-fill" type="button">咨询王老师</button>
-          </article>
-          <article class="teacher-card reveal-card" data-note="咨询李老师：作业精管｜来源西南财经大学｜适合作业拖拉、时间管理差、需要固定节奏｜服务晚托精管、3-6 人小组提效｜区域高新区、锦江区">
-            <div class="teacher-top"><div class="avatar">李</div><span class="subject">作业精管</span></div>
-            <h3>李老师</h3>
-            <p class="source">来源：西南财经大学</p>
-            <p><b>适合：</b>作业拖拉、时间管理差、需要固定节奏</p>
-            <p><b>服务：</b>晚托精管｜3-6 人小组提效</p>
-            <p><b>区域：</b>高新区、锦江区</p>
-            <div class="tag-row"><span>作业规划</span><span>时间管理</span><span>小组带练</span></div>
-            <button class="text-btn note-fill" type="button">咨询李老师</button>
-          </article>
-          <article class="teacher-card reveal-card" data-note="咨询何老师：小学全科作业陪伴｜来源成都理工大学｜适合放学后没人管、家长下班晚、需要长期稳定安排｜服务晚托精管、长期陪伴｜区域成华区、龙泉驿区">
-            <div class="teacher-top"><div class="avatar">何</div><span class="subject">小学全科作业陪伴</span></div>
-            <h3>何老师</h3>
-            <p class="source">来源：成都理工大学</p>
-            <p><b>适合：</b>放学后没人管、家长下班晚、需要长期稳定安排</p>
-            <p><b>服务：</b>晚托精管｜长期陪伴</p>
-            <p><b>区域：</b>成华区、龙泉驿区</p>
-            <div class="tag-row"><span>晚托</span><span>作业检查</span><span>长期稳定</span></div>
-            <button class="text-btn note-fill" type="button">咨询何老师</button>
-          </article>
-        </div>
+        <div class="teacher-grid" id="teacherGrid" aria-live="polite"></div>
+        <button class="mobile-toggle-list" type="button" data-toggle-mobile-list="teachers" aria-expanded="false">查看更多老师</button>
       </div>
     </section>
 
@@ -342,7 +295,7 @@
             <p>适合：家长下班晚、老人管不了作业</p>
             <button class="text-btn note-fill" type="button">我想加入</button>
           </article>
-          <article class="group-card reveal-card" data-note="想加入：青羊区金沙｜五年级阅读表达小组｜还差 3 人成组｜周六 10:00-11:30｜适合阅读理解丢分、作文启动慢">
+          <article class="group-card reveal-card mobile-extra-group" data-note="想加入：青羊区金沙｜五年级阅读表达小组｜还差 3 人成组｜周六 10:00-11:30｜适合阅读理解丢分、作文启动慢">
             <span class="area">青羊区金沙</span>
             <h3>五年级阅读表达小组</h3>
             <em>还差 <span class="num">3</span> 人成组</em>
@@ -350,7 +303,7 @@
             <p>适合：阅读理解丢分、作文启动慢</p>
             <button class="text-btn note-fill" type="button">我想加入</button>
           </article>
-          <article class="group-card reveal-card" data-note="想加入：武侯区桐梓林｜一年级习惯陪伴小组｜还差 2 人成组｜周一/周三 18:00-19:30｜适合坐不住、写作业需要陪着推进">
+          <article class="group-card reveal-card mobile-extra-group" data-note="想加入：武侯区桐梓林｜一年级习惯陪伴小组｜还差 2 人成组｜周一/周三 18:00-19:30｜适合坐不住、写作业需要陪着推进">
             <span class="area">武侯区桐梓林</span>
             <h3>一年级习惯陪伴小组</h3>
             <em>还差 <span class="num">2</span> 人成组</em>
@@ -358,7 +311,7 @@
             <p>适合：坐不住、写作业需要陪着推进</p>
             <button class="text-btn note-fill" type="button">我想加入</button>
           </article>
-          <article class="group-card reveal-card" data-note="想加入：成华区建设路｜四年级英语朗读小组｜还差 2 人成组｜周六 14:00-15:30｜适合单词记不住、不敢开口读">
+          <article class="group-card reveal-card mobile-extra-group" data-note="想加入：成华区建设路｜四年级英语朗读小组｜还差 2 人成组｜周六 14:00-15:30｜适合单词记不住、不敢开口读">
             <span class="area">成华区建设路</span>
             <h3>四年级英语朗读小组</h3>
             <em>还差 <span class="num">2</span> 人成组</em>
@@ -367,6 +320,7 @@
             <button class="text-btn note-fill" type="button">我想加入</button>
           </article>
         </div>
+        <button class="mobile-toggle-list" type="button" data-toggle-mobile-list="groups" aria-expanded="false">查看更多小组</button>
       </div>
     </section>
 
@@ -378,37 +332,44 @@
           <p>以下为常见咨询类型，已做隐私处理。</p>
         </div>
         <div class="needs-grid">
-          <article class="need-card reveal-card" data-note="我家也类似：高新区三年级，数学每天都会错几道简单计算，家长怀疑不是不会，是没人盯过程。服务建议：一对一陪读 + 错题整理">
+          <article class="need-card reveal-card mobile-open" data-mobile-title="高新区三年级｜数学计算粗心" data-note="我家情况类似：高新区三年级，数学每天都会错几道简单计算，家长怀疑不是不会，是没人盯过程。服务建议：一对一陪读 + 错题整理">
+            <h3 class="need-title">高新区三年级｜数学计算粗心</h3>
             <p>高新区三年级，数学每天都会错几道简单计算，家长怀疑不是不会，是没人盯过程。</p>
             <strong>服务建议：一对一陪读 + 错题整理</strong>
             <button class="text-btn note-fill" type="button">我家也类似</button>
           </article>
-          <article class="need-card reveal-card" data-note="我家也类似：锦江区二年级，老人能接孩子，但作业基本管不了，家长回家还要重新陪。服务建议：晚托精管">
+          <article class="need-card reveal-card" data-mobile-title="锦江区二年级｜放学后作业没人管" data-note="我家情况类似：锦江区二年级，老人能接孩子，但作业基本管不了，家长回家还要重新陪。服务建议：晚托精管">
+            <h3 class="need-title">锦江区二年级｜放学后作业没人管</h3>
             <p>锦江区二年级，老人能接孩子，但作业基本管不了，家长回家还要重新陪。</p>
             <strong>服务建议：晚托精管</strong>
             <button class="text-btn note-fill" type="button">我家也类似</button>
           </article>
-          <article class="need-card reveal-card" data-note="我家也类似：青羊区五年级，语文阅读理解总是答不到点，作文写得慢。服务建议：阅读表达小组">
+          <article class="need-card reveal-card" data-mobile-title="青羊区五年级｜阅读表达弱" data-note="我家情况类似：青羊区五年级，语文阅读理解总是答不到点，作文写得慢。服务建议：阅读表达小组">
+            <h3 class="need-title">青羊区五年级｜阅读表达弱</h3>
             <p>青羊区五年级，语文阅读理解总是答不到点，作文写得慢。</p>
             <strong>服务建议：阅读表达小组</strong>
             <button class="text-btn note-fill" type="button">我家也类似</button>
           </article>
-          <article class="need-card reveal-card" data-note="我家也类似：武侯区一年级，孩子刚上小学，坐不住，写字和作业习惯都需要慢慢带。服务建议：低年级习惯陪伴">
+          <article class="need-card reveal-card mobile-extra-need" data-mobile-title="武侯区一年级｜习惯陪伴" data-note="我家情况类似：武侯区一年级，孩子刚上小学，坐不住，写字和作业习惯都需要慢慢带。服务建议：低年级习惯陪伴">
+            <h3 class="need-title">武侯区一年级｜习惯陪伴</h3>
             <p>武侯区一年级，孩子刚上小学，坐不住，写字和作业习惯都需要慢慢带。</p>
             <strong>服务建议：低年级习惯陪伴</strong>
             <button class="text-btn note-fill" type="button">我家也类似</button>
           </article>
-          <article class="need-card reveal-card" data-note="我家也类似：成华区四年级，英语单词背得慢，不敢开口读，家长想找温和一点的老师。服务建议：英语朗读陪练">
+          <article class="need-card reveal-card mobile-extra-need" data-mobile-title="成华区四年级｜英语朗读陪练" data-note="我家情况类似：成华区四年级，英语单词背得慢，不敢开口读，家长想找温和一点的老师。服务建议：英语朗读陪练">
+            <h3 class="need-title">成华区四年级｜英语朗读陪练</h3>
             <p>成华区四年级，英语单词背得慢，不敢开口读，家长想找温和一点的老师。</p>
             <strong>服务建议：英语朗读陪练</strong>
             <button class="text-btn note-fill" type="button">我家也类似</button>
           </article>
-          <article class="need-card reveal-card" data-note="我家也类似：双流区六年级，作业量变大，错题反复，家长想周末集中整理一下。服务建议：周末错题整理">
+          <article class="need-card reveal-card mobile-extra-need" data-mobile-title="双流区六年级｜周末错题整理" data-note="我家情况类似：双流区六年级，作业量变大，错题反复，家长想周末集中整理一下。服务建议：周末错题整理">
+            <h3 class="need-title">双流区六年级｜周末错题整理</h3>
             <p>双流区六年级，作业量变大，错题反复，家长想周末集中整理一下。</p>
             <strong>服务建议：周末错题整理</strong>
             <button class="text-btn note-fill" type="button">我家也类似</button>
           </article>
         </div>
+        <button class="mobile-toggle-list" type="button" data-toggle-mobile-list="needs" aria-expanded="false">查看更多需求</button>
       </div>
     </section>
 
@@ -418,8 +379,13 @@
           <p class="eyebrow">Compare</p>
           <h2>为什么不是随便找个家教？</h2>
         </div>
+        <div class="compare-tabs" role="tablist" aria-label="服务对比">
+          <button type="button" data-compare-tab="tutor">普通家教</button>
+          <button type="button" data-compare-tab="care">普通托管</button>
+          <button class="active" type="button" data-compare-tab="xinyu">新雨</button>
+        </div>
         <div class="compare-grid">
-          <article class="compare-card reveal-card">
+          <article class="compare-card reveal-card" data-compare-panel="tutor">
             <h3>普通找家教</h3>
             <ul>
               <li>家长自己筛人</li>
@@ -428,7 +394,7 @@
               <li>后续反馈弱</li>
             </ul>
           </article>
-          <article class="compare-card reveal-card">
+          <article class="compare-card reveal-card" data-compare-panel="care">
             <h3>普通托管</h3>
             <ul>
               <li>多数只看写完没写完</li>
@@ -437,7 +403,7 @@
               <li>家长不知道卡点在哪</li>
             </ul>
           </article>
-          <article class="compare-card xy-card reveal-card">
+          <article class="compare-card xy-card reveal-card active" data-compare-panel="xinyu">
             <h3>新雨</h3>
             <ul>
               <li>成都本地需求先沟通</li>
@@ -458,8 +424,12 @@
           <h2>关于新雨</h2>
         </div>
         <div class="about-copy reveal-card">
-          <p>新雨由电子科大本科、海归硕士背景的主理人创办。最开始只是想解决身边成都家长放学后没人管、作业没人盯、下班太晚这些真实问题。</p>
-          <p>现在的新雨，主要为成都小学家庭提供晚托精管、一对一陪读、小组提效和本地老师匹配服务。</p>
+          <p class="about-mobile-short">新雨由电子科大本科、海归硕士背景的主理人创办，专注成都小学晚托精管、一对一陪读、小组提效和本地老师匹配。</p>
+          <div class="about-full">
+            <p>新雨由电子科大本科、海归硕士背景的主理人创办。最开始只是想解决身边成都家长放学后没人管、作业没人盯、下班太晚这些真实问题。</p>
+            <p>现在的新雨，主要为成都小学家庭提供晚托精管、一对一陪读、小组提效和本地老师匹配服务。</p>
+          </div>
+          <button class="mobile-toggle-list" type="button" data-toggle-about aria-expanded="false">了解更多</button>
         </div>
       </div>
     </section>
@@ -496,7 +466,7 @@
           <h2>FAQ</h2>
         </div>
         <div class="faq-list">
-          <details class="reveal-card">
+          <details class="reveal-card" open>
             <summary>新雨适合几年级孩子？</summary>
             <p>主要面向成都小学 1-6 年级家庭，会根据年级、区域、放学时间和主要问题建议安排。</p>
           </details>
@@ -668,6 +638,60 @@
         </div>
       </div>
     </div>
+  </div>
+
+  <div class="modal teacher-profile-modal" id="teacherProfileModal" aria-hidden="true" role="dialog" aria-labelledby="teacherProfileName">
+    <div class="modal-backdrop" data-close-profile></div>
+    <div class="modal-panel teacher-profile-panel">
+      <button class="modal-close" type="button" aria-label="关闭老师主页" data-close-profile>×</button>
+      <div class="profile-shell">
+        <div class="profile-head">
+          <div class="profile-avatar avatar" id="teacherProfileAvatar">石</div>
+          <div>
+            <div class="profile-kicker" id="teacherProfileBadge">招牌名师</div>
+            <h2 id="teacherProfileName">石老师</h2>
+            <p id="teacherProfileMeta">小学数学｜西南交通大学研究生</p>
+            <div class="profile-tags" id="teacherProfileTags"></div>
+          </div>
+        </div>
+        <div class="profile-sections">
+          <section>
+            <h3>老师简介</h3>
+            <p id="teacherProfileIntro"></p>
+          </section>
+          <section>
+            <h3>适合孩子</h3>
+            <p id="teacherProfileFit"></p>
+          </section>
+          <section>
+            <h3>主要服务</h3>
+            <p id="teacherProfileService"></p>
+          </section>
+          <section>
+            <h3>可服务区域</h3>
+            <p id="teacherProfileArea"></p>
+          </section>
+          <section>
+            <h3>陪伴风格</h3>
+            <p id="teacherProfileStyle"></p>
+          </section>
+          <section>
+            <h3>可约时间</h3>
+            <p id="teacherProfileSchedule"></p>
+          </section>
+          <section class="profile-detail">
+            <h3>详情要点</h3>
+            <ul id="teacherProfileDetail"></ul>
+          </section>
+        </div>
+      </div>
+      <button class="btn btn-primary profile-consult" type="button" id="teacherProfileConsult">咨询这位老师</button>
+    </div>
+  </div>
+
+  <div class="mobile-bottom-bar" aria-label="移动端快捷操作">
+    <button class="btn btn-primary" type="button" data-open-modal="booking">我要找老师</button>
+    <button class="btn btn-ghost" type="button" data-open-modal="teacher">老师入驻</button>
   </div>
 
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
