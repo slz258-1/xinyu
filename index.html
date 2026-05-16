@@ -444,15 +444,17 @@
           <article class="contact-card reveal-card">
             <span>家长咨询</span>
             <h3>适合：找晚托、一对一、小组、老师匹配</h3>
-            <p>微信：xinyu_edu_cd</p>
-            <p>电话：138-0000-0000</p>
+            <p>微信：shalizi258</p>
+            <p>电话：15908145298</p>
+            <p>QQ：2562707641</p>
             <button class="btn btn-primary" type="button" data-open-modal="booking">提交孩子需求</button>
           </article>
           <article class="contact-card reveal-card">
             <span>老师入驻</span>
             <h3>适合：大学生、兼职陪伴师、专职陪读老师</h3>
-            <p>微信：xinyu_teacher_cd</p>
-            <p>电话：138-0000-0000</p>
+            <p>微信：shalizi258</p>
+            <p>电话：15908145298</p>
+            <p>QQ：2562707641</p>
             <button class="btn btn-soft" type="button" data-open-modal="teacher">申请成为老师</button>
           </article>
         </div>
@@ -500,7 +502,7 @@
         <p>成都小学晚托精管、一对一陪读、3-6 人小组提效、本地老师匹配。</p>
       </div>
       <p>服务沟通覆盖：高新区、锦江区、青羊区、武侯区、成华区、金牛区、天府新区等成都家庭常见需求区域。</p>
-      <p>家长微信：xinyu_edu_cd<br>老师微信：xinyu_teacher_cd<br>电话：138-0000-0000</p>
+      <p>微信：shalizi258<br>电话：15908145298<br>QQ：2562707641</p>
     </div>
   </footer>
 
@@ -513,56 +515,62 @@
           <p class="eyebrow">家长需求</p>
           <h2 id="bookingTitle">提交孩子需求</h2>
         </div>
-        <form id="bookingForm" novalidate>
+        <form id="bookingForm" name="parent-lead" method="POST" data-netlify="true" netlify-honeypot="bot-field" novalidate>
+          <input type="hidden" name="form-name" value="parent-lead">
+          <p class="hidden">
+            <label>不要填写这个字段：<input name="bot-field"></label>
+          </p>
           <div class="field-grid">
-            <label>家长称呼<input type="text" name="parentName" data-required="true" placeholder="例如：李女士"></label>
-            <label>手机号或微信号<input type="text" name="contact" data-required="true" placeholder="电话或微信"></label>
-            <label>孩子年级<input type="text" name="grade" data-required="true" placeholder="例如：三年级"></label>
-            <label>所在区县<input type="text" name="district" data-required="true" placeholder="例如：高新区"></label>
-            <label>学校附近片区<input type="text" name="schoolArea" placeholder="例如：金融城/攀成钢"></label>
-            <label>放学时间<input type="text" name="afterSchoolTime" placeholder="例如：16:30"></label>
-            <label>家长预计接娃时间<input type="text" name="pickupTime" placeholder="例如：19:00"></label>
+            <label>家长称呼<input type="text" name="家长称呼" data-required="true" placeholder="例如：李女士"></label>
+            <label>手机号或微信号<input type="text" name="手机号或微信号" data-required="true" placeholder="电话或微信"></label>
+            <label>孩子年级<input type="text" name="孩子年级" data-required="true" placeholder="例如：三年级"></label>
+            <label>所在区县<input type="text" name="所在区县" data-required="true" placeholder="例如：高新区"></label>
+            <label>学校附近片区<input type="text" name="学校附近片区" placeholder="例如：金融城/攀成钢"></label>
+            <label>放学时间<input type="text" name="放学时间" placeholder="例如：16:30"></label>
+            <label>家长预计接娃时间<input type="text" name="家长预计接娃时间" placeholder="例如：19:00"></label>
           </div>
           <fieldset class="checkbox-group">
             <legend>想了解服务</legend>
-            <label><input type="checkbox" name="service" value="晚托">晚托</label>
-            <label><input type="checkbox" name="service" value="一对一陪读">一对一陪读</label>
-            <label><input type="checkbox" name="service" value="3-6人小组">3-6人小组</label>
-            <label><input type="checkbox" name="service" value="英语陪练">英语陪练</label>
-            <label><input type="checkbox" name="service" value="阅读陪伴">阅读陪伴</label>
-            <label><input type="checkbox" name="service" value="数学计算">数学计算</label>
-            <label><input type="checkbox" name="service" value="周末错题整理">周末错题整理</label>
+            <label><input type="checkbox" name="想了解服务" value="晚托">晚托</label>
+            <label><input type="checkbox" name="想了解服务" value="一对一陪读">一对一陪读</label>
+            <label><input type="checkbox" name="想了解服务" value="3-6人小组">3-6人小组</label>
+            <label><input type="checkbox" name="想了解服务" value="英语陪练">英语陪练</label>
+            <label><input type="checkbox" name="想了解服务" value="阅读陪伴">阅读陪伴</label>
+            <label><input type="checkbox" name="想了解服务" value="数学计算">数学计算</label>
+            <label><input type="checkbox" name="想了解服务" value="周末错题整理">周末错题整理</label>
           </fieldset>
           <fieldset class="checkbox-group">
             <legend>主要问题</legend>
-            <label><input type="checkbox" name="issue" value="作业拖拉">作业拖拉</label>
-            <label><input type="checkbox" name="issue" value="数学粗心">数学粗心</label>
-            <label><input type="checkbox" name="issue" value="阅读弱">阅读弱</label>
-            <label><input type="checkbox" name="issue" value="英语弱">英语弱</label>
-            <label><input type="checkbox" name="issue" value="没人接娃">没人接娃</label>
-            <label><input type="checkbox" name="issue" value="家长没时间管">家长没时间管</label>
-            <label><input type="checkbox" name="issue" value="不知道怎么选老师">不知道怎么选老师</label>
+            <label><input type="checkbox" name="主要问题" value="作业拖拉">作业拖拉</label>
+            <label><input type="checkbox" name="主要问题" value="数学粗心">数学粗心</label>
+            <label><input type="checkbox" name="主要问题" value="阅读弱">阅读弱</label>
+            <label><input type="checkbox" name="主要问题" value="英语弱">英语弱</label>
+            <label><input type="checkbox" name="主要问题" value="没人接娃">没人接娃</label>
+            <label><input type="checkbox" name="主要问题" value="家长没时间管">家长没时间管</label>
+            <label><input type="checkbox" name="主要问题" value="不知道怎么选老师">不知道怎么选老师</label>
           </fieldset>
-          <label class="full-field">备注<textarea id="bookingNote" name="note" rows="4" placeholder="可以写孩子当前情况、学校附近位置、期望安排等"></textarea></label>
+          <label class="full-field">备注<textarea id="bookingNote" name="备注" rows="4" placeholder="可以写孩子当前情况、学校附近位置、期望安排等"></textarea></label>
           <button class="btn btn-primary btn-submit" type="submit">提交后帮我安排合适方案</button>
         </form>
       </div>
       <div class="modal-success-view" hidden>
         <div class="success-icon">✓</div>
         <h2>已收到孩子需求</h2>
-        <p>为了更快沟通，请添加新雨家长咨询微信，或直接拨打电话。</p>
+        <p>我们会根据孩子年级、所在区域、放学时间和主要需求，帮你初步匹配合适的晚托、一对一或小组安排。</p>
         <div class="success-contact">
           <div class="qr-box">
-            <span>二维码占位</span>
-            <small>后续替换为家长微信二维码</small>
+            <span>这里放微信二维码</span>
+            <small>后续替换为真实微信二维码</small>
           </div>
           <div class="contact-lines">
-            <p>微信号：<b>xinyu_edu_cd</b></p>
-            <p>电话：<b>138-0000-0000</b></p>
+            <p>微信：<b>shalizi258</b></p>
+            <p>电话：<b>15908145298</b></p>
+            <p>QQ：<b>2562707641</b></p>
             <div class="success-actions">
-              <button class="btn btn-primary copy-btn" type="button" data-copy="xinyu_edu_cd">复制微信号</button>
-              <a class="btn btn-soft" href="tel:13800000000">拨打电话</a>
-              <button class="btn btn-ghost" type="button" data-close-modal>关闭</button>
+              <button class="btn btn-primary copy-btn" type="button" data-copy="shalizi258" data-copy-label="微信号">复制微信号</button>
+              <a class="btn btn-soft" href="tel:15908145298">拨打电话</a>
+              <button class="btn btn-ghost copy-btn" type="button" data-copy="2562707641" data-copy-label="QQ">复制QQ</button>
+              <button class="btn btn-ghost" type="button" data-close-modal>我已添加，关闭页面</button>
             </div>
           </div>
         </div>
@@ -579,60 +587,66 @@
           <p class="eyebrow">老师申请</p>
           <h2 id="teacherTitle">申请成为老师</h2>
         </div>
-        <form id="teacherForm" novalidate>
+        <form id="teacherForm" name="teacher-apply" method="POST" data-netlify="true" netlify-honeypot="bot-field" novalidate>
+          <input type="hidden" name="form-name" value="teacher-apply">
+          <p class="hidden">
+            <label>不要填写这个字段：<input name="bot-field"></label>
+          </p>
           <div class="field-grid">
-            <label>姓名<input type="text" name="teacherName" data-required="true" placeholder="你的姓名"></label>
-            <label>手机号或微信号<input type="text" name="teacherContact" data-required="true" placeholder="电话或微信"></label>
-            <label>学校/身份<input type="text" name="identity" data-required="true" placeholder="例如：四川大学 / 专职陪读老师"></label>
+            <label>姓名<input type="text" name="姓名" data-required="true" placeholder="你的姓名"></label>
+            <label>手机号或微信号<input type="text" name="手机号或微信号" data-required="true" placeholder="电话或微信"></label>
+            <label>学校/身份<input type="text" name="学校或身份" data-required="true" placeholder="例如：四川大学 / 专职陪读老师"></label>
           </div>
           <fieldset class="checkbox-group">
             <legend>可带学科</legend>
-            <label><input type="checkbox" name="subject" value="小学语文">小学语文</label>
-            <label><input type="checkbox" name="subject" value="小学数学">小学数学</label>
-            <label><input type="checkbox" name="subject" value="小学英语">小学英语</label>
-            <label><input type="checkbox" name="subject" value="全科作业陪伴">全科作业陪伴</label>
-            <label><input type="checkbox" name="subject" value="阅读表达">阅读表达</label>
-            <label><input type="checkbox" name="subject" value="英语朗读">英语朗读</label>
-            <label><input type="checkbox" name="subject" value="数学计算">数学计算</label>
-            <label><input type="checkbox" name="subject" value="低年级习惯">低年级习惯</label>
+            <label><input type="checkbox" name="可带学科" value="小学语文">小学语文</label>
+            <label><input type="checkbox" name="可带学科" value="小学数学">小学数学</label>
+            <label><input type="checkbox" name="可带学科" value="小学英语">小学英语</label>
+            <label><input type="checkbox" name="可带学科" value="全科作业陪伴">全科作业陪伴</label>
+            <label><input type="checkbox" name="可带学科" value="阅读表达">阅读表达</label>
+            <label><input type="checkbox" name="可带学科" value="英语朗读">英语朗读</label>
+            <label><input type="checkbox" name="可带学科" value="数学计算">数学计算</label>
+            <label><input type="checkbox" name="可带学科" value="低年级习惯">低年级习惯</label>
           </fieldset>
           <div class="field-grid compact-fields">
-            <label>可服务区域<input type="text" name="serviceArea" data-required="true" placeholder="例如：高新、成华、锦江"></label>
-            <label>可服务时间<input type="text" name="availableTime" data-required="true" placeholder="例如：周一三五 16:00 后"></label>
+            <label>可服务区域<input type="text" name="可服务区域" data-required="true" placeholder="例如：高新、成华、锦江"></label>
+            <label>可服务时间<input type="text" name="可服务时间" data-required="true" placeholder="例如：周一三五 16:00 后"></label>
           </div>
           <fieldset class="radio-group">
             <legend>是否能线下</legend>
-            <label><input type="radio" name="offline" value="能线下">能线下</label>
-            <label><input type="radio" name="offline" value="只能线上">只能线上</label>
-            <label><input type="radio" name="offline" value="都可以">都可以</label>
+            <label><input type="radio" name="是否能线下" value="能线下">能线下</label>
+            <label><input type="radio" name="是否能线下" value="只能线上">只能线上</label>
+            <label><input type="radio" name="是否能线下" value="都可以">都可以</label>
           </fieldset>
           <fieldset class="radio-group">
             <legend>是否能周末</legend>
-            <label><input type="radio" name="weekend" value="能">能</label>
-            <label><input type="radio" name="weekend" value="不能">不能</label>
-            <label><input type="radio" name="weekend" value="看情况">看情况</label>
+            <label><input type="radio" name="是否能周末" value="能">能</label>
+            <label><input type="radio" name="是否能周末" value="不能">不能</label>
+            <label><input type="radio" name="是否能周末" value="看情况">看情况</label>
           </fieldset>
-          <label class="full-field">过往经验<textarea name="experience" rows="3" placeholder="可以写陪读、家教、托管、小组带练等经历"></textarea></label>
-          <label class="full-field">备注<textarea name="note" rows="3" placeholder="其他想说明的信息"></textarea></label>
+          <label class="full-field">过往经验<textarea name="过往经验" rows="3" placeholder="可以写陪读、家教、托管、小组带练等经历"></textarea></label>
+          <label class="full-field">备注<textarea name="备注" rows="3" placeholder="其他想说明的信息"></textarea></label>
           <button class="btn btn-primary btn-submit" type="submit">申请加入</button>
         </form>
       </div>
       <div class="modal-success-view" hidden>
         <div class="success-icon">✓</div>
         <h2>已收到入驻申请</h2>
-        <p>请添加新雨老师招募微信，方便后续面谈、审核和匹配家长需求。</p>
+        <p>请添加新雨微信，方便后续面谈、审核和匹配家长需求。</p>
         <div class="success-contact">
           <div class="qr-box">
-            <span>二维码占位</span>
-            <small>后续替换为老师招募微信二维码</small>
+            <span>这里放微信二维码</span>
+            <small>后续替换为真实微信二维码</small>
           </div>
           <div class="contact-lines">
-            <p>微信号：<b>xinyu_teacher_cd</b></p>
-            <p>电话：<b>138-0000-0000</b></p>
+            <p>微信：<b>shalizi258</b></p>
+            <p>电话：<b>15908145298</b></p>
+            <p>QQ：<b>2562707641</b></p>
             <div class="success-actions">
-              <button class="btn btn-primary copy-btn" type="button" data-copy="xinyu_teacher_cd">复制微信号</button>
-              <a class="btn btn-soft" href="tel:13800000000">拨打电话</a>
-              <button class="btn btn-ghost" type="button" data-close-modal>关闭</button>
+              <button class="btn btn-primary copy-btn" type="button" data-copy="shalizi258" data-copy-label="微信号">复制微信号</button>
+              <a class="btn btn-soft" href="tel:15908145298">拨打电话</a>
+              <button class="btn btn-ghost copy-btn" type="button" data-copy="2562707641" data-copy-label="QQ">复制QQ</button>
+              <button class="btn btn-ghost" type="button" data-close-modal>我已添加，关闭页面</button>
             </div>
           </div>
         </div>
@@ -693,6 +707,36 @@
     <button class="btn btn-primary" type="button" data-open-modal="booking">我要找老师</button>
     <button class="btn btn-ghost" type="button" data-open-modal="teacher">老师入驻</button>
   </div>
+
+  <form name="parent-lead" method="POST" data-netlify="true" netlify-honeypot="bot-field" hidden>
+    <input type="hidden" name="form-name" value="parent-lead">
+    <input name="bot-field">
+    <input name="家长称呼">
+    <input name="手机号或微信号">
+    <input name="孩子年级">
+    <input name="所在区县">
+    <input name="学校附近片区">
+    <input name="放学时间">
+    <input name="家长预计接娃时间">
+    <input name="想了解服务">
+    <input name="主要问题">
+    <textarea name="备注"></textarea>
+  </form>
+
+  <form name="teacher-apply" method="POST" data-netlify="true" netlify-honeypot="bot-field" hidden>
+    <input type="hidden" name="form-name" value="teacher-apply">
+    <input name="bot-field">
+    <input name="姓名">
+    <input name="手机号或微信号">
+    <input name="学校或身份">
+    <input name="可带学科">
+    <input name="可服务区域">
+    <input name="可服务时间">
+    <input name="是否能线下">
+    <input name="是否能周末">
+    <textarea name="过往经验"></textarea>
+    <textarea name="备注"></textarea>
+  </form>
 
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
   <script src="script.js"></script>
