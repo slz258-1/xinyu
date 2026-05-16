@@ -634,11 +634,17 @@ document.querySelectorAll("[data-required='true']").forEach((input) => {
   input.addEventListener("input", () => clearFieldError(input));
 });
 
+function encode(data) {
+  return new URLSearchParams(data).toString();
+}
+
 function collectFormData(form) {
   const rawData = new FormData(form);
   const data = {};
 
   rawData.forEach((value, key) => {
+    if (key === "bot-field") return;
+
     if (data[key]) {
       data[key] = Array.isArray(data[key]) ? data[key] : [data[key]];
       data[key].push(value);
@@ -650,32 +656,60 @@ function collectFormData(form) {
   return data;
 }
 
-function submitStaticForm(form, modal, type) {
+function normalizeFormData(data, formName) {
+  const normalized = {
+    "form-name": formName
+  };
+
+  Object.entries(data).forEach(([key, value]) => {
+    if (key === "form-name") return;
+    normalized[key] = Array.isArray(value) ? value.join("、") : value;
+  });
+
+  return normalized;
+}
+
+async function submitNetlifyForm(form, modal, formName) {
   if (!validateForm(form)) return;
 
-  const formData = {
-    type,
-    submittedAt: new Date().toISOString(),
-    ...collectFormData(form)
-  };
+  const formData = normalizeFormData(collectFormData(form), formName);
 
   console.log("新雨表单提交：", formData);
 
-  // 后续可以接飞书多维表格、腾讯文档、金数据、自有后端或 Webhook。
-  // 当前页面为静态演示，后续只需把这里替换为 fetch 提交即可。
+  // 注意：Netlify Forms 只有部署到 Netlify 后才会真正收集表单。
+  // 本地打开 index.html 时，fetch("/") 不会进入 Netlify 后台。
+  // 本地测试只能看控制台数据和成功页效果。
+  // 后续也可以在这里同步接飞书多维表格、腾讯文档、金数据、自有后端或 Webhook。
 
-  form.reset();
-  showSuccessView(modal);
+  try {
+    if (window.location.protocol !== "file:") {
+      const response = await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: encode(formData)
+      });
+
+      if (!response.ok) {
+        throw new Error(`Netlify Forms 提交失败：${response.status}`);
+      }
+    }
+
+    form.reset();
+    showSuccessView(modal);
+  } catch (error) {
+    console.error(error);
+    showToast("提交可能失败了，请直接添加微信 shalizi258 或拨打 15908145298。");
+  }
 }
 
 document.querySelector("#bookingForm")?.addEventListener("submit", (event) => {
   event.preventDefault();
-  submitStaticForm(event.currentTarget, modals.booking, "家长孩子需求");
+  submitNetlifyForm(event.currentTarget, modals.booking, "parent-lead");
 });
 
 document.querySelector("#teacherForm")?.addEventListener("submit", (event) => {
   event.preventDefault();
-  submitStaticForm(event.currentTarget, modals.teacher, "老师入驻申请");
+  submitNetlifyForm(event.currentTarget, modals.teacher, "teacher-apply");
 });
 
 document.querySelectorAll(".faq-list details").forEach((item) => {
@@ -721,12 +755,14 @@ async function copyText(text) {
 
 document.querySelectorAll(".copy-btn").forEach((button) => {
   button.addEventListener("click", async () => {
+    const label = button.dataset.copyLabel || "内容";
+
     try {
       await copyText(button.dataset.copy || "");
-      showToast("微信号已复制");
+      showToast(`${label}已复制`);
     } catch (error) {
       showToast("复制失败，请手动复制");
-      console.warn("复制微信号失败：", error);
+      console.warn("复制失败：", error);
     }
   });
 });
